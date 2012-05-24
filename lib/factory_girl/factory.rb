@@ -26,6 +26,10 @@ module FactoryGirl
         class_name.to_s.camelize.constantize
       end
     end
+    
+    def parent_name
+      parent.name 
+    end
 
     def run(build_strategy, overrides, &block)
       block ||= ->(result) { result }
